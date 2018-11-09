@@ -1,5 +1,6 @@
 // --------------- Generator
-let Mustache = require('mustache');
+const Mustache = require('mustache');
+const u = require('./generator/utils.js');
 
 Mustache.escape = function(text) {return text;};
 Mustache.tags = ['<<%%', '%%>>'];

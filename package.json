@@ -15,6 +15,7 @@
   "author": "Joel Rivera",
   "license": "ISC",
   "dependencies": {
-    "mustache": "^3.0.0"
+    "mustache": "^3.0.0",
+    "ncp": "^2.0.0"
   }
 }

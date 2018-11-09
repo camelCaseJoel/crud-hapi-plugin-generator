@@ -1,20 +1,11 @@
-// Deletes recursively. Syncronous
-delDirSync = function(path) {
-    var files = [];
-    if( fs.existsSync(path) ) {
-        files = fs.readdirSync(path);
-        files.forEach(function(file,index){
-            var curPath = path + "/" + file;
-            if(fs.lstatSync(curPath).isDirectory()) { // recurse
-                deleteFolderRecursive(curPath);
-            } else { // delete file
-                fs.unlinkSync(curPath);
-            }
-        });
-        fs.rmdirSync(path);
-    }
-};
+const delDirAsync = require('rimraf');
+const copyDirAsync = require('ncp').ncp;
+copyDirAsync.limit = 16;
+
 
 module.exports = {
-  delDirSync
+  // usage: https://stackoverflow.com/questions/12627586/is-node-js-rmdir-recursive-will-it-work-on-non-empty-directories/12761924#12761924
+  delDirAsync,
+  // usage: https://www.npmjs.com/package/ncp
+  copyDirAsync
 };

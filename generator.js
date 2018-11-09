@@ -10,6 +10,6 @@ let data = {
 
 let someText = 'Hello, I love <<%% thing %%>>'
 
-let output = Mustache.render();  
+let output = Mustache.render(someText, data);
 
-console.log(Mustache);
+console.log(output);

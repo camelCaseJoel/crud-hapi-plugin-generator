@@ -12,20 +12,17 @@ const fillBlankPlugin   = require('./generator/steps/fillBlankPlugin');
 Mustache.escape = function(text) {return text;};
 Mustache.tags = ['<<%%', '%%>>'];
 
-
-
-
-
+// init function with program steps
 const init = async () => {
   await cleanOutputFolder();
   await copyBlankPlugin();
   await parseInputModel();
   await fillBlankPlugin();
+
+  return 'exit';
 }
 
 init();
-
-
 
 
 
@@ -40,7 +37,7 @@ init();
 
 u.copyDirAsync('./generator/template_plugin', './_OUTPUT/plugin', (err) => {
   if (err) {
-    console.log('== DELETE ERROR ==');
+    console.log('== COPY ERROR ==');
     console.log(err);
   } else {
     console.log('Folder Copied!');

@@ -11,11 +11,11 @@ module.exports = async () => {
 
   await promiseDelDirAsync('./_OUTPUT/plugin')
     .then(() => {
-
-  }).catch((e) => {
+      console.log('Successful cleaning! yay!');
+    }).catch((e) => {
       console.log('ERROR CLEANING');
       console.log(e);
-  });
+    });
 
   return true;
 

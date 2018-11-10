@@ -1,29 +1,38 @@
-// --------------- Generator
+// --------------- Imports
 const Mustache = require('mustache');
 const u = require('./generator/utils.js');
 
+// loading steps functions
+const cleanOutputFolder = require('./generator/steps/cleanOutputFolder.js');
+const copyBlankPlugin   = require('./generator/steps/copyBlankPlugin.js');
+const parseInputModel   = require('./generator/steps/parseInputModel.js');
+const fillBlankPlugin   = require('./generator/steps/fillBlankPlugin');
+
+// configuring Mustache
 Mustache.escape = function(text) {return text;};
 Mustache.tags = ['<<%%', '%%>>'];
 
 
-// ---------------------- testing mustache
-let data = {
-  thing: 'Pizza'
-};
 
-let someText = 'Hello, I love <<%% thing %%>>'
 
-let output = Mustache.render(someText, data);
 
-//console.log(output);
+const init = async () => {
+  await cleanOutputFolder();
+  await copyBlankPlugin();
+  await parseInputModel();
+  await fillBlankPlugin();
+}
 
-// ----------------------- end
+init();
 
 
 
 
 
 // ============================================= DOCS
+
+
+
 
 /*
 
@@ -55,5 +64,28 @@ u.delDirAsync('./_OUTPUT/delete_me', (err) => {
     console.log('Folder deleted!');
   }
 });
+
+*/
+
+
+
+
+/*
+
+// This works
+
+// ---------------------- testing mustache
+let data = {
+  thing: 'Pizza'
+};
+
+let someText = 'Hello, I love <<%% thing %%>>'
+
+let output = Mustache.render(someText, data);
+
+//console.log(output);
+
+// ----------------------- end
+
 
 */

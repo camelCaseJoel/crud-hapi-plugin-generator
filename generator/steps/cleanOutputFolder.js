@@ -1,14 +1,21 @@
 const u = require.main.require('./generator/utils.js');
 
 module.exports = async () => {
-  // promisify here
+  // ------------------------ promisify here
   const promiseDelDirAsync = (path) => {
-    new Promise((resolve) => {
+    return new Promise((resolve) => {
       return u.delDirAsync(path, resolve);
     });
   }
-  // --------------
-  await promiseDelDirAsync('./_OUTPUT/plugin');
+  // --------------------------------------
+
+  await promiseDelDirAsync('./_OUTPUT/plugin')
+    .then(() => {
+
+  }).catch((e) => {
+      console.log('ERROR CLEANING');
+      console.log(e);
+  });
 
   return true;
 

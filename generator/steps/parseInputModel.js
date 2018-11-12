@@ -1,5 +1,7 @@
 module.exports = async () => {
-  console.log(finalData);
+  // the data is retrieved by ====>>> fake sequelize.define()
+
+  //console.log(finalData);
   console.log('parsed Model');
   return true;
 };

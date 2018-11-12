@@ -7,7 +7,7 @@ const after = function (server) {
 }
 
 exports.plugin = {
-  name: 'ikompras-branch',
+  name: 'ikompras-<<%% name %%>>',
   version: '1.0.0',
   register: async function (server, options) {
     server.dependency(['ikompras-util', 'ikompras-db'], after);

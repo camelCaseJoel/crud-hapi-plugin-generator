@@ -4,7 +4,10 @@
   "description": "Generates Hapi.js CRUD plugins ",
   "main": "generator.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "print_index": "cat _OUTPUT/plugin/index.js",
+    "print_routes": "cat _OUTPUT/plugin/routes.js",
+    "print_handlers": "cat _OUTPUT/plugin/handlers.js"
   },
   "keywords": [
     "generator",
@@ -15,6 +18,7 @@
   "author": "Joel Rivera",
   "license": "ISC",
   "dependencies": {
+    "lodash.capitalize": "^4.2.1",
     "mustache": "^3.0.0",
     "ncp": "^2.0.0",
     "rimraf": "^2.6.2",

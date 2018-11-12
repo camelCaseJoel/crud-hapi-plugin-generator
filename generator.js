@@ -6,7 +6,12 @@
 require('./generator/fake-data-types.js'); //------------- 1 st
 require('./generator/fake-sequelize.js');  //------------- 2 nd
 require('./_INPUT/_INPUT_MODEL.js'); // ------------------ 3 rd
-
+// these globals are being created:
+// --------------------------------
+// --> DataTypes
+// --> DATA_TO_INSERT_INTO_TEMPLATES
+// --> sequelize
+// --> ADDITIONAL_REQUIRED_INFO
 
 // --------------- Imports
 const Mustache = require('mustache');

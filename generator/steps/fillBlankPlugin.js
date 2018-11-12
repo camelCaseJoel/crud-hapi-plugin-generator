@@ -4,7 +4,7 @@ const doneGraphic = fs.readFileSync('./generator/graphics/done.txt', {encoding: 
 module.exports = async () => {
   require('./fileMods/mod_index.js');
   require('./fileMods/mod_routes.js');
-  
+  require('./fileMods/mod_handlers.js');
 
 
   console.log(doneGraphic);

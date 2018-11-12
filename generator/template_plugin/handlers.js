@@ -1,38 +1,38 @@
 const messages = require('./text/messages');
-const dbm = require('../database/wrapper/branch'); // db methods
+const dbm = require('../database/wrapper/<<%% name %%>>'); // db methods
 
 
-const createBranch = async (request, h) => {
-  const dbResponse = dbm.createBranch(request.payload);
+const create<<%% capitalizedName %%>> = async (request, h) => {
+  const dbResponse = dbm.create<<%% capitalizedName %%>>(request.payload);
   return dbResponse;
 }
 
-const findBranch = async (request, h) => {
+const find<<%% capitalizedName %%>> = async (request, h) => {
   console.log(request.params.id);
-  return dbResponse = dbm.findBranchById(request.params.id);
+  return dbResponse = dbm.find<<%% capitalizedName %%>>ById(request.params.id);
   return dbResponse;
 }
 
-const findBranches = async (request, h) => {
-  const dbResponse = dbm.findBranches(request.query);
+const find<<%% capitalizedPluralName %%>> = async (request, h) => {
+  const dbResponse = dbm.find<<%% capitalizedPluralName %%>>(request.query);
   return dbResponse;
 }
 
-const updateBranch = async (request, h) => {
-  const dbResponse = dbm.updateBranch(request.params.id, request.payload);
+const update<<%% capitalizedName %%>> = async (request, h) => {
+  const dbResponse = dbm.update<<%% capitalizedName %%>>(request.params.id, request.payload);
   return dbResponse;
 }
 
-const deleteBranch = async (request, hack) => {
-  const dbResponse = dbm.deleteBranch(request.params.id);
+const delete<<%% capitalizedName %%>> = async (request, hack) => {
+  const dbResponse = dbm.delete<<%% capitalizedName %%>>(request.params.id);
   return dbResponse;
 }
 
 
 module.exports = {
-  createBranch,
-  findBranch,
-  findBranches,
-  updateBranch,
-  deleteBranch
+  create<<%% capitalizedName %%>>,
+  find<<%% capitalizedName %%>>,
+  find<<%% capitalizedPluralName %%>>,
+  update<<%% capitalizedName %%>>,
+  delete<<%% capitalizedName %%>>
 }

@@ -5,9 +5,9 @@
   "main": "generator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "print_index": "cat _OUTPUT/plugin/index.js",
-    "print_routes": "cat _OUTPUT/plugin/routes.js",
-    "print_handlers": "cat _OUTPUT/plugin/handlers.js"
+    "printindex": "cat _OUTPUT/plugin/index.js",
+    "printroutes": "cat _OUTPUT/plugin/routes.js",
+    "printhandlers": "cat _OUTPUT/plugin/handlers.js"
   },
   "keywords": [
     "generator",

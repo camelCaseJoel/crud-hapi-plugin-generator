@@ -10,12 +10,15 @@ require('./_INPUT/_INPUT_MODEL.js'); // ------------------ 3 rd
 // --------------------------------
 // --> DataTypes
 // --> DATA_TO_INSERT_INTO_TEMPLATES
+// --> finalData
 // --> sequelize
 // --> ADDITIONAL_REQUIRED_INFO
+// --> mustache
 
 // --------------- Imports
 const Mustache = require('mustache');
 const u = require('./generator/utils.js');
+global.mustache = Mustache;
 
 // loading steps functions
 const cleanOutputFolder = require('./generator/steps/cleanOutputFolder.js');

@@ -1,3 +1,13 @@
+// ---------> Loading GLOBALS
+// --------------------------
+// don't do this at home kids
+// --------------------------
+// Don't change the order of the loading:
+require('./generator/fake-data-types.js'); //------------- 1 st
+require('./generator/fake-sequelize.js');  //------------- 2 nd
+require('./_INPUT/_INPUT_MODEL.js'); // ------------------ 3 rd
+
+
 // --------------- Imports
 const Mustache = require('mustache');
 const u = require('./generator/utils.js');

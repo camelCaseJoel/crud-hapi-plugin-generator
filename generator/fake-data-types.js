@@ -1,0 +1,20 @@
+global.DataTypes = {};
+
+DataTypes.STRING = () => 'fake func';
+DataTypes.TEXT = () => 'fake func';
+DataTypes.BOOLEAN = () => 'fake func';
+DataTypes.DATE = () => 'fake func';
+DataTypes.INTEGER = () => 'fake func';
+DataTypes.BIGINT = () => 'fake func';
+DataTypes.FLOAT = () => 'fake func';
+DataTypes.REAL = () => 'fake func';
+DataTypes.DOUBLE = () => 'fake func';
+DataTypes.DECIMAL = () => 'fake func';
+DataTypes.DATEONLY = () => 'fake func';
+DataTypes.ENUM = () => 'fake func';
+DataTypes.ARRAY = () => 'fake func';
+DataTypes.JSON = () => 'fake func';
+DataTypes.JSONB = () => 'fake func';
+DataTypes.BLOB = () => 'fake func';
+DataTypes.GEOMETRY = () => 'fake func';
+DataTypes.RANGE = () => 'fake func';

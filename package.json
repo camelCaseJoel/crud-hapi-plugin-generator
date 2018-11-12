@@ -9,7 +9,8 @@
     "printroutes": "cat _OUTPUT/plugin/routes.js",
     "printhandlers": "cat _OUTPUT/plugin/handlers.js",
     "printdescriptions": "cat _OUTPUT/plugin/text/descriptions.js",
-    "printwrapper": "cat _OUTPUT/plugin/_DB_WRAPPER/w.js"
+    "printwrapper": "cat _OUTPUT/plugin/_DB_WRAPPER/w.js",
+    "printall": "cat _OUTPUT/plugin/index.js; cat _OUTPUT/plugin/routes.js; cat _OUTPUT/plugin/handlers.js; cat _OUTPUT/plugin/text/descriptions.js; cat _OUTPUT/plugin/_DB_WRAPPER/w.js"
   },
   "keywords": [
     "generator",

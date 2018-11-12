@@ -1,4 +1,4 @@
-const messages = require('./text/messages');
+//const messages = require('./text/messages');
 const dbm = require('../database/wrapper/<<%% name %%>>'); // db methods
 
 

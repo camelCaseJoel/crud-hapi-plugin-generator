@@ -5,6 +5,8 @@ module.exports = async () => {
   require('./fileMods/mod_index.js');
   require('./fileMods/mod_routes.js');
   require('./fileMods/mod_handlers.js');
+  require('./fileMods/mod_descriptions.js');
+  require('./fileMods/mod_dbWrapper.js');
 
 
   console.log(doneGraphic);

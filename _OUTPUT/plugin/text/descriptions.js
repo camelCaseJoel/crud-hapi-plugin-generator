@@ -1,8 +1,8 @@
 
 module.exports = {
-  createBranch: '',
-  findBranch: '',
-  findBranches: '',
-  updateBranch: '',
-  deleteBranch: ''
+  createBranchSchedule: '',
+  findBranchSchedule: '',
+  findBranchSchedules: '',
+  updateBranchSchedule: '',
+  deleteBranchSchedule: ''
 };

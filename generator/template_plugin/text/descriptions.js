@@ -1,8 +1,8 @@
 
 module.exports = {
-  createBranch: '',
-  findBranch: '',
-  findBranches: '',
-  updateBranch: '',
-  deleteBranch: ''
+  create<<%% capitalizedName %%>>: '',
+  find<<%% capitalizedName %%>>: '',
+  find<<%% capitalizedPluralName %%>>: '',
+  update<<%% capitalizedName %%>>: '',
+  delete<<%% capitalizedName %%>>: ''
 };

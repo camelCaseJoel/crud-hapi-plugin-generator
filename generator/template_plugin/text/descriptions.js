@@ -1,8 +1,8 @@
 
 module.exports = {
-  create<<%% capitalizedName %%>>: '',
-  find<<%% capitalizedName %%>>: '',
-  find<<%% capitalizedPluralName %%>>: '',
-  update<<%% capitalizedName %%>>: '',
-  delete<<%% capitalizedName %%>>: ''
+  create<<%% capitalizedName %%>>: 'write a description here',
+  find<<%% capitalizedName %%>>: 'write a description here',
+  find<<%% capitalizedPluralName %%>>: 'write a description here',
+  update<<%% capitalizedName %%>>: 'write a description here',
+  delete<<%% capitalizedName %%>>: 'write a description here'
 };

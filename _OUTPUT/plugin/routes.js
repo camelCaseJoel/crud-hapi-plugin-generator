@@ -5,11 +5,11 @@ const description = require('./text/descriptions.js')
 module.exports = [
 {
   method: 'POST',
-  path: '/api/branch',
-  handler: handlers.createBranch,
+  path: '/api/branch-schedule',
+  handler: handlers.createBranchSchedule,
   options: {
-    description: description.createBranch,
-    tags: ['api', 'branch'],
+    description: description.createBranchSchedule,
+    tags: ['api', 'branchSchedule'],
     auth: false
     // ,
     // validate: {
@@ -27,31 +27,31 @@ module.exports = [
 },
 {
   method: 'GET',
-  path: '/api/branch/{id}',
-  handler: handlers.findBranch,
+  path: '/api/branch-schedule/{id}',
+  handler: handlers.findBranchSchedule,
   options: {
-    description: description.findBranch,
-    tags: ['api', 'branch'],
+    description: description.findBranchSchedule,
+    tags: ['api', 'branchSchedule'],
     auth: false
   }
 },
 {
   method: 'GET',
-  path: '/api/branch',
-  handler: handlers.findBranches,
+  path: '/api/branch-schedule',
+  handler: handlers.findBranchSchedules,
   options: {
-    description: description.findBranches,
-    tags: ['api', 'branch'],
+    description: description.findBranchSchedules,
+    tags: ['api', 'branchSchedule'],
     auth: false
   }
 },
 {
   method: 'PATCH',
-  path: '/api/branch/{id}',
-  handler: handlers.updateBranch,
+  path: '/api/branch-schedule/{id}',
+  handler: handlers.updateBranchSchedule,
   options: {
-    description: description.updateBranch,
-    tags: ['api', 'branch'],
+    description: description.updateBranchSchedule,
+    tags: ['api', 'branchSchedule'],
     auth: false
     // ,
     // validate: {
@@ -69,11 +69,11 @@ module.exports = [
 },
 {
   method: 'DELETE',
-  path: '/api/branch/{id}',
-  handler: handlers.deleteBranch,
+  path: '/api/branch-schedule/{id}',
+  handler: handlers.deleteBranchSchedule,
   options: {
-    description: description.deleteBranch,
-    tags: ['api', 'branch '],
+    description: description.deleteBranchSchedule,
+    tags: ['api', 'branchSchedule '],
     auth: false
   }
 }]

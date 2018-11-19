@@ -15,12 +15,12 @@ const create<<%% capitalizedName %%>> = async (data) => {
 
 const find<<%% capitalizedPluralName %%>> = async (queryParams) => {
   const queryParamsExist = !(Object.keys(queryParams).length === 0);
-  const queryKeysArr = Object.keys(queryParams);
-  const whereObj = {};
+  // const queryKeysArr = Object.keys(queryParams);
+  // const whereObj = {};
 
-  queryKeysArr.forEach(( k ) => {
-    whereObj[ k ] = queryParams[ k ];
-  });
+  // queryKeysArr.forEach(( k ) => {
+  //   whereObj[ k ] = queryParams[ k ];
+  // });
 
   //-------------------------------
   if(!queryParamsExist){
@@ -32,7 +32,7 @@ const find<<%% capitalizedPluralName %%>> = async (queryParams) => {
       });
   }else{
     return <<%% capitalizedName %%>>
-      .findAll({where: whereObj})
+      .findAll({where: queryParams})
       .catch( err => {
         log(err);
         return err;

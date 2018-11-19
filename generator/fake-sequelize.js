@@ -1,5 +1,5 @@
 const capitalize = require('lodash.capitalize');
-const camelCaseToDash = require('./utils');
+const camelCaseToDash = require('./utils').camelCaseToDash;
 
 global.DATA_TO_INSERT_INTO_TEMPLATES = {};
 global.finalData = DATA_TO_INSERT_INTO_TEMPLATES;

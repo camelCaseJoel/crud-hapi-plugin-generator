@@ -1,38 +1,38 @@
 //const messages = require('./text/messages');
-const dbm = require('../database/wrapper/branch'); // db methods
+const dbm = require('../database/wrapper/branchSchedule'); // db methods
 
 
-const createBranch = async (request, h) => {
-  const dbResponse = dbm.createBranch(request.payload);
+const createBranchSchedule = async (request, h) => {
+  const dbResponse = dbm.createBranchSchedule(request.payload);
   return dbResponse;
 }
 
-const findBranch = async (request, h) => {
+const findBranchSchedule = async (request, h) => {
   console.log(request.params.id);
-  return dbResponse = dbm.findBranchById(request.params.id);
+  return dbResponse = dbm.findBranchScheduleById(request.params.id);
   return dbResponse;
 }
 
-const findBranches = async (request, h) => {
-  const dbResponse = dbm.findBranches(request.query);
+const findBranchSchedules = async (request, h) => {
+  const dbResponse = dbm.findBranchSchedules(request.query);
   return dbResponse;
 }
 
-const updateBranch = async (request, h) => {
-  const dbResponse = dbm.updateBranch(request.params.id, request.payload);
+const updateBranchSchedule = async (request, h) => {
+  const dbResponse = dbm.updateBranchSchedule(request.params.id, request.payload);
   return dbResponse;
 }
 
-const deleteBranch = async (request, hack) => {
-  const dbResponse = dbm.deleteBranch(request.params.id);
+const deleteBranchSchedule = async (request, hack) => {
+  const dbResponse = dbm.deleteBranchSchedule(request.params.id);
   return dbResponse;
 }
 
 
 module.exports = {
-  createBranch,
-  findBranch,
-  findBranches,
-  updateBranch,
-  deleteBranch
+  createBranchSchedule,
+  findBranchSchedule,
+  findBranchSchedules,
+  updateBranchSchedule,
+  deleteBranchSchedule
 }

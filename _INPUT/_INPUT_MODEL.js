@@ -17,7 +17,7 @@
 
 global.ADDITIONAL_REQUIRED_INFO = {
   // Write the following required information:
-  PLURAL_MODEL_NAME: 'branches'
+  PLURAL_MODEL_NAME: 'branchSchedules'
 }
 
 // ================================== STEP #2 ======================================
@@ -33,7 +33,7 @@ global.ADDITIONAL_REQUIRED_INFO = {
 
 
 
-sequelize.define('branch', {
+sequelize.define('branchSchedule', {
   id: {
     type: DataTypes.INTEGER(11),
     allowNull: false,
@@ -41,49 +41,38 @@ sequelize.define('branch', {
     field: 'ID',
     autoIncrement: true
   },
-  address: {
-    type: DataTypes.STRING(100),
+  inTime: {
+    type: DataTypes.DATE(),
     allowNull: false,
-    field: 'ADDRESS'
+    field: 'IN_TIME'
   },
-  phone: {
-    type: DataTypes.STRING(10),
+  outTime: {
+    type: DataTypes.DATE(),
     allowNull: false,
-    field: 'PHONE'
+    field: 'OUT_TIME'
   },
-  chatNo: {
-    type: DataTypes.STRING(10),
+  day: {
+    type: DataTypes.STRING(),
     allowNull: false,
-    field: 'CHAT_NO'
+    field: 'DAY'
   },
-  companyId: {
+  isWorkingDay: {
+    type: DataTypes.BOOLEAN(),
+    allowNull: false,
+    field: 'IS_WORKING_DAY'
+  },
+  branchId: {
     type: DataTypes.INTEGER(11),
     allowNull: false,
     references: {
-      model: 'Company',
+      model: 'Branch',
       key: 'id'
     },
-    field: 'COMPANY_ID'
-  },
-  managerId: {
-    type: DataTypes.INTEGER(11),
-    allowNull: false,
-    references: {
-      model: 'Manager',
-      key: 'id'
-    },
-    field: 'MANAGER_ID'
-  },
-  sectorId: {
-    type: DataTypes.INTEGER(11),
-    allowNull: false,
-    references: {
-      model: 'Sector',
-      key: 'id'
-    },
-    field: 'SECTOR_ID'
+    field: 'BRANCH_ID'
   }
-}, {
-  tableName: 'Branch'
+
+},
+{
+  tableName: 'BranchSchedule'
 });
 

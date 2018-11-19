@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
-const db = require('./db.js');
-const <<%% capitalizedName %%>> = require('../models/<<%% capitalizedName %%>>.js')(db.getDbConnection(), Sequelize);
+const db = require('./../db.js');
+const <<%% capitalizedName %%>> = db.getModels().<<%% capitalizedName %%>>;
 const log = require('../../util/utils/logging.js').logError;
 
 

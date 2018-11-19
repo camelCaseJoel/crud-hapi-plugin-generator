@@ -5,7 +5,7 @@ const description = require('./text/descriptions.js')
 module.exports = [
 {
   method: 'POST',
-  path: '/api/<<%% name %%>>',
+  path: '/api/<<%% dashName %%>>',
   handler: handlers.create<<%% capitalizedName %%>>,
   options: {
     description: description.create<<%% capitalizedName %%>>,
@@ -27,7 +27,7 @@ module.exports = [
 },
 {
   method: 'GET',
-  path: '/api/<<%% name %%>>/{id}',
+  path: '/api/<<%% dashName %%>>/{id}',
   handler: handlers.find<<%% capitalizedName %%>>,
   options: {
     description: description.find<<%% capitalizedName %%>>,
@@ -37,7 +37,7 @@ module.exports = [
 },
 {
   method: 'GET',
-  path: '/api/<<%% name %%>>',
+  path: '/api/<<%% dashName %%>>',
   handler: handlers.find<<%% capitalizedPluralName %%>>,
   options: {
     description: description.find<<%% capitalizedPluralName %%>>,
@@ -47,7 +47,7 @@ module.exports = [
 },
 {
   method: 'PATCH',
-  path: '/api/<<%% name %%>>/{id}',
+  path: '/api/<<%% dashName %%>>/{id}',
   handler: handlers.update<<%% capitalizedName %%>>,
   options: {
     description: description.update<<%% capitalizedName %%>>,
@@ -69,7 +69,7 @@ module.exports = [
 },
 {
   method: 'DELETE',
-  path: '/api/<<%% name %%>>/{id}',
+  path: '/api/<<%% dashName %%>>/{id}',
   handler: handlers.delete<<%% capitalizedName %%>>,
   options: {
     description: description.delete<<%% capitalizedName %%>>,

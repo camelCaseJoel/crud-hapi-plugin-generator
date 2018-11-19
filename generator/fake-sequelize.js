@@ -1,4 +1,5 @@
 const capitalize = require('lodash.capitalize');
+const camelCaseToDash = require('./utils');
 
 global.DATA_TO_INSERT_INTO_TEMPLATES = {};
 global.finalData = DATA_TO_INSERT_INTO_TEMPLATES;
@@ -15,6 +16,9 @@ sequelize.define = (name, fields) => {
     
   finalData.capitalizedPluralName =
     capitalize( finalData.pluralName[0] ) + finalData.pluralName.substring(1);
+  
+
+  finalData.dashName = camelCaseToDash( finalData.name );
 }
 
 

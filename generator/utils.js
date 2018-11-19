@@ -1,4 +1,5 @@
 const delDirContentsAsync = require('./functions.js').removeDirForce;
+const camelCaseToDash = require('./functions.js').camelCaseToDash;
 const delDirAsync  = require('rimraf');
 const copyDirAsync = require('ncp').ncp;
 copyDirAsync.limit = 16;
@@ -11,5 +12,7 @@ module.exports = {
   // usage: https://www.npmjs.com/package/ncp
   copyDirAsync,
   // usage: https://gist.github.com/liangzan/807712/8fb16263cb39e8472d17aea760b6b1492c465af2
-  delDirContentsAsync
+  delDirContentsAsync,
+
+  camelCaseToDash
 };

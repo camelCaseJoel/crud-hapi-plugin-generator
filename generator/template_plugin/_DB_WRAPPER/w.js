@@ -69,6 +69,8 @@ const delete<<%% capitalizedName %%>> = async (id) => {
   });
 }
 
+<<%% includes %%>>
+
 module.exports = {
   create<<%% capitalizedName %%>>,
   find<<%% capitalizedPluralName %%>>,
@@ -78,4 +80,3 @@ module.exports = {
 };
 
 
-<<%% includes %%>>

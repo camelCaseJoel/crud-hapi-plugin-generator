@@ -18,18 +18,29 @@ sequelize.define = (name, fields) => {
   finalData.includes = () => {
     if(finalData.modelsToInclude.length > 0){
       console.log(finalData.modelsToInclude);
+      let modelsString = finalData.modelsToInclude.join();
+
+      return `
+const find${finalData.capitalizedName}AndInclude = async (id) => {
+  ${finalData.capitalizedName}.findAll({
+    include: [
+        ${modelsString}
+    ]
+  }).catch( err => {
+    log(err);
+    return err;
+  });
+}
+      `;
     } else {
-      console.log('==================== no extra models ====================');
+      console.log('==================== no extra models(no includes) ====================');
+      return '';
     }
   };
 }
 
 
  
-
-
-
-
 
 
 global.sequelize = sequelize;

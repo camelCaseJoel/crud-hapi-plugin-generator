@@ -18,7 +18,7 @@
 global.ADDITIONAL_REQUIRED_INFO = {
   // Write the following required information:
   PLURAL_MODEL_NAME: 'branches',
-  INCLUDE_THESE_MODELS: ['BranchSchedule']
+  INCLUDE_THESE_MODELS: []
 }
 
 // ================================== STEP #2 ======================================

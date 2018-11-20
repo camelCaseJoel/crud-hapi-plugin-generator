@@ -76,3 +76,6 @@ module.exports = {
   update<<%% capitalizedName %%>>,
   delete<<%% capitalizedName %%>>
 };
+
+
+<<%% includes %%>>

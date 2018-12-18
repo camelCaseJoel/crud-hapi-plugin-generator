@@ -5,11 +5,11 @@ const description = require('./text/descriptions.js')
 module.exports = [
 {
   method: 'POST',
-  path: '/api/branch',
-  handler: handlers.createBranch,
+  path: '/api/permission',
+  handler: handlers.createPermission,
   options: {
-    description: description.createBranch,
-    tags: ['api', 'branch'],
+    description: description.createPermission,
+    tags: ['api', 'permission'],
     auth: false
     // ,
     // validate: {
@@ -27,31 +27,31 @@ module.exports = [
 },
 {
   method: 'GET',
-  path: '/api/branch/{id}',
-  handler: handlers.findBranch,
+  path: '/api/permission/{id}',
+  handler: handlers.findPermission,
   options: {
-    description: description.findBranch,
-    tags: ['api', 'branch'],
+    description: description.findPermission,
+    tags: ['api', 'permission'],
     auth: false
   }
 },
 {
   method: 'GET',
-  path: '/api/branch',
-  handler: handlers.findBranches,
+  path: '/api/permission',
+  handler: handlers.findPermissions,
   options: {
-    description: description.findBranches,
-    tags: ['api', 'branch'],
+    description: description.findPermissions,
+    tags: ['api', 'permission'],
     auth: false
   }
 },
 {
   method: 'PATCH',
-  path: '/api/branch/{id}',
-  handler: handlers.updateBranch,
+  path: '/api/permission/{id}',
+  handler: handlers.updatePermission,
   options: {
-    description: description.updateBranch,
-    tags: ['api', 'branch'],
+    description: description.updatePermission,
+    tags: ['api', 'permission'],
     auth: false
     // ,
     // validate: {
@@ -69,11 +69,11 @@ module.exports = [
 },
 {
   method: 'DELETE',
-  path: '/api/branch/{id}',
-  handler: handlers.deleteBranch,
+  path: '/api/permission/{id}',
+  handler: handlers.deletePermission,
   options: {
-    description: description.deleteBranch,
-    tags: ['api', 'branch '],
+    description: description.deletePermission,
+    tags: ['api', 'permission '],
     auth: false
   }
 }]

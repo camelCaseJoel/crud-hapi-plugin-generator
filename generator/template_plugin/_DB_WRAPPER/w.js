@@ -3,71 +3,46 @@ const db = require('./../db.js');
 const <<%% capitalizedName %%>> = db.getModels().<<%% capitalizedName %%>>;
 const log = require('../../util/utils/logging.js').logError;
 
+/**
+ * @function
+ * @name    create<<%% capitalizedName %%>>
+ * @param   {object} data - data for the object creation
+ * @return  {Promise<Model>}
+ */
+const create<<%% capitalizedName %%>> = async (data) => <<%% capitalizedName %%>>.create(data);
 
-const create<<%% capitalizedName %%>> = async (data) => {
-  return <<%% capitalizedName %%>>.create(data).then( result => {
-    return result;
-  }).catch( err => {
-    log(err);
-    return err;
-  });
-}
+/**
+ * @function
+ * @name    find<<%% capitalizedPluralName %%>>
+ * @param   {object} params -search parameters
+ * @return  {Promise<Array<Model>>}
+ */
+const find<<%% capitalizedPluralName %%>> = async (params = {}) => <<%% capitalizedName %%>>.findAll({ where: params} );
 
-const find<<%% capitalizedPluralName %%>> = async (queryParams) => {
-  const queryParamsExist = !(Object.keys(queryParams).length === 0);
-  // const queryKeysArr = Object.keys(queryParams);
-  // const whereObj = {};
+/**
+ * @function
+ * @name    find<<%% capitalizedName %%>>ById
+ * @param   {number} id - id of <<%% capitalizedName %%>>
+ * @return  {Promise<Model>}
+ */
+const find<<%% capitalizedName %%>>ById = async (id) => <<%% capitalizedName %%>>.findById(id);
 
-  // queryKeysArr.forEach(( k ) => {
-  //   whereObj[ k ] = queryParams[ k ];
-  // });
+/**
+ * @function
+ * @name    update<<%% capitalizedName %%>>
+ * @param   {number} id - record id to update
+ * @param   {object} data -data to update
+ * @return  {Promise<Array[affectedCount, affected rows]>}
+ */
+const update<<%% capitalizedName %%>> = async (id, data) => <<%% capitalizedName %%>>.update(data, { where:{ id } });
 
-  //-------------------------------
-  if(!queryParamsExist){
-    return <<%% capitalizedName %%>>
-      .findAll()
-      .catch( err => {
-        log(err);
-        return err;
-      });
-  }else{
-    return <<%% capitalizedName %%>>
-      .findAll({where: queryParams})
-      .catch( err => {
-        log(err);
-        return err;
-      });
-  }
-
-
-}
-
-const find<<%% capitalizedName %%>>ById = async (id) => {
-  return <<%% capitalizedName %%>>
-    .findById(id)
-    .catch( err => {
-      log(err);
-      return err
-    });
-}
-
-const update<<%% capitalizedName %%>> = async (id, data) => {
-  return <<%% capitalizedName %%>>
-    .update(data, { where:{ id: id } })
-    .catch( err => {
-      log(err);
-      return err;
-    });
-}
-
-const delete<<%% capitalizedName %%>> = async (id) => {
-  return <<%% capitalizedName %%>>
-  .destroy({ where:{ id: id } })
-  .catch( err => {
-    log(err);
-    return err;
-  });
-}
+/**
+ * @function
+ * @name    delete<<%% capitalizedName %%>>
+ * @param   {number} id - id of the <<%% capitalizedName %%>> to delete
+ * @return  {Promise<Number>}
+ */
+const delete<<%% capitalizedName %%>> = async (id) => <<%% capitalizedName %%>>.destroy({ where:{ id } });
 
 <<%% includes %%>>
 
@@ -78,5 +53,3 @@ module.exports = {
   update<<%% capitalizedName %%>>,
   delete<<%% capitalizedName %%>>
 };
-
-

@@ -17,7 +17,7 @@
 
 global.ADDITIONAL_REQUIRED_INFO = {
   // Write the following required information:
-  PLURAL_MODEL_NAME: 'branches',
+  PLURAL_MODEL_NAME: 'permissions',
   INCLUDE_THESE_MODELS: []
 }
 
@@ -33,58 +33,20 @@ global.ADDITIONAL_REQUIRED_INFO = {
 // --> Your generated PLUGIN will be in the _OUTPUT folder
 
 
-
-sequelize.define('branch', {
-  id: {
-    type: DataTypes.INTEGER(11),
-    allowNull: false,
-    primaryKey: true,
-    field: 'ID',
-    autoIncrement: true
-  },
-  address: {
-    type: DataTypes.STRING(100),
-    allowNull: false,
-    field: 'ADDRESS'
-  },
-  phone: {
-    type: DataTypes.STRING(10),
-    allowNull: false,
-    field: 'PHONE'
-  },
-  chatNo: {
-    type: DataTypes.STRING(10),
-    allowNull: false,
-    field: 'CHAT_NO'
-  },
-  companyId: {
-    type: DataTypes.INTEGER(11),
-    allowNull: false,
-    references: {
-      model: 'Company',
-      key: 'id'
+sequelize.define('permission', {
+    id: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
+      primaryKey: true,
+      field: 'ID',
+      autoIncrement: true
     },
-    field: 'COMPANY_ID'
-  },
-  managerId: {
-    type: DataTypes.INTEGER(11),
-    allowNull: false,
-    references: {
-      model: 'Manager',
-      key: 'id'
-    },
-    field: 'MANAGER_ID'
-  },
-  sectorId: {
-    type: DataTypes.INTEGER(11),
-    allowNull: false,
-    references: {
-      model: 'Sector',
-      key: 'id'
-    },
-    field: 'SECTOR_ID'
-  }
-}, {
-  tableName: 'Branch'
-});
-
+    name: {
+      type: DataTypes.STRING(45),
+      allowNull: false,
+      field: 'NAME',
+      unique: true
+    }
+  }, {
+    tableName: 'Permission'
+  });

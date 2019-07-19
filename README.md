@@ -30,4 +30,4 @@ sequelize.define('permission', {
 
 2. All you need to do is copy this code and paste it in the file **_INPUT/INPUT_MODEL.js** following the instructions described in the file.
 
-3. Next, run 
+3. Next, run ```node generator.js``` ... the generated code will be inside **_OUTPUT/** 

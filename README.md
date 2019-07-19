@@ -3,6 +3,8 @@ CRUD Generator
 
 This is a CRUD ( create, read, update, delete ) code generator. It generates Hapi.js plugins that wrap CRUD code in the form of web REST API. The CRUD code will be generated from a **Sequelize(ORM) Model** that you have to provide. The generator will take the provided Model code and generate all the needed files(JavaScript files) to create a hapi.js plugin that exposes a CRUD web API.
 
+I wrote this tool to increase productivity in a project, I wrote it in a very quickly/urgent manner so this code is **full of no-nos**. Please ignore all the madness.
+
 How to install
 --------------
 - Install Node.js/ NPM
